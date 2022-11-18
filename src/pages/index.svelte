@@ -3,15 +3,15 @@
   metatags.title = "My Routify app";
   metatags.description = "Description coming soon...";
 
-  function dyna() {
+  function logPageLoad() {
     window.dtrum?.setPage({
-			name: 'pathname',
-			group: 'title',
+			name: 'home',
+			group: 'pages',
 		});
   }
 
   $afterPageLoad(() => { 
-    //dyna();
+    //logPageLoad();
   });
 </script>
 
@@ -23,4 +23,4 @@
 
 <button class="glow-on-hover" type="button" on:click={$goto("/tweets")}>tweets</button>
 
-<button on:click={dyna()}>Dyna</button>
+<button class="glow-on-hover" on:click={logPageLoad()}>logPageLoad</button>

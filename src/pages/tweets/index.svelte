@@ -8,36 +8,19 @@
     reload();
   });
 
-  function dyna() {
+  function logPageLoad() {
     window.dtrum?.setPage({
-			name: 'pathname',
-			group: 'title',
+			name: '\tweets',
+			group: 'tweets',
 		});
   }
 
   $afterPageLoad(() => { 
-    dyna();
+    logPageLoad();
   });
 
   function reload() {
-    let elementcontent = `<a
-		id="twitter_timeline"
-		class="twitter-timeline"
-		data-tweet-limit="1"		
-		data-chrome="nofooter noborders"
-		data-dnt="true"
-		href="https://twitter.com/QwikDev">		
-	</a>`;
-    if (tweetblock) {
-      setTimeout(() => {
-        tweetblock.innerHTML = elementcontent;
-        console.log(tweetblock);
-        let script = document.createElement("script");
-        script.src = "https://platform.twitter.com/widgets.js";
-        document.body.append(script);
-        window.dispatchEvent(new CustomEvent("ptupdate"));
-      }, 300);
-    }
+    // empty 
   }
 </script>
 
