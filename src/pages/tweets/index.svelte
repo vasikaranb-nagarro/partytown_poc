@@ -1,11 +1,22 @@
 <script>
   import { onMount } from "svelte";
-  import { metatags, goto } from "@roxi/routify";
+  import { afterPageLoad, goto } from "@roxi/routify";
 
   let tweetblock = true;
 
   onMount(async () => {
     reload();
+  });
+
+  function dyna() {
+    window.dtrum?.setPage({
+			name: 'pathname',
+			group: 'title',
+		});
+  }
+
+  $afterPageLoad(() => { 
+    dyna();
   });
 
   function reload() {
