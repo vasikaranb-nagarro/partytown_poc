@@ -11,7 +11,7 @@
   }
 
   $afterPageLoad(() => { 
-    dyna();
+    //dyna();
   });
 </script>
 
@@ -22,3 +22,5 @@
 
 
 <button class="glow-on-hover" type="button" on:click={$goto("/tweets")}>tweets</button>
+
+<button on:click={dyna()}>Dyna</button>
