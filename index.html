@@ -41,80 +41,21 @@
     }, 3000);
   </script>
 
-
-
-  <script type="text/javascript">
-    console.log("Before partytown 2");
-  </script>
-  <!-- <script>
-            // web worker API ~ example
-            const myWorker = new Worker('/sumitkp1.js');
-        </script> -->
-
-  <!-- <script type="text/partytown" src="/hello.js"></script> -->
-
-  <!-- scripts loaded after sometime, isnt picked up by partytown but it will pick it if it is within running time of partytown -->
-
-
-
-
-
-  <!-- loads timerpt.js after __ second as partytown type -->
-  <script>
-    setTimeout(function () {
-      var timedScript1 = document.createElement('script');
-      timedScript1.src = "/timerpt.js"
-      timedScript1.type = "text/partytown"
-      document.head.appendChild(timedScript1)
-
-      // window.dispatchEvent(new CustomEvent('ptupdate'));
-    }, 10000)
-
-             //loads after __ seconds
-  </script>
-
-  <!-- <script>
-        var script1 = document.createElement('script');
-        script1.src = "/timerpt.js"
-        script1.type = "text/partytown"
-        document.head.appendChild(script1)
-</script> -->
-
-
-  <script type="text/partytown">
-            console.log("inline partytown script loaded");
-        </script>
-
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
 
   <title>partytown POC</title>
 
   <link rel='icon' type='image/png' href='/favicon.png'>
-  <script>
-    window.onload = function () {
-      setTimeout(loadAfterTime, 100)
-    };
-
-    function loadAfterTime() {
-      var timedScript1 = document.createElement('script');
-      timedScript1.src = "/hello.js"
-      timedScript1.type = "text/partytown"
-      document.head.appendChild(timedScript1)
-    }
-  </script>
 </head>
 
 <body>
   <noscript>Please enable Javascript for this site to function.</noscript>
-  <!-- <a class="twitter-timeline" data-tweet-limit="1" data-chrome="nofooter noborders" data-dnt="true"
-    href="https://twitter.com/QwikDev"></a>
-  <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> -->
   <script type="module" src="/src/main.js"></script>
 
-  <script type="text/javascript" src="/glaze.js" id="seamless_dynamic_loaders_glaze"></script>
+  <script type="text/partytown" src="/glaze.js" id="seamless_dynamic_loaders_glaze"></script>
 
-  <div id="sumit-test"></div>
+  <div id="test"></div>
 </body>
 
 </html>
