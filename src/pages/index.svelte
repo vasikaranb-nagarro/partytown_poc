@@ -11,7 +11,7 @@
   }
 
   $afterPageLoad(() => { 
-    //logPageLoad();
+    logPageLoad();
   });
 </script>
 
@@ -23,4 +23,4 @@
 
 <button class="glow-on-hover" type="button" on:click={$goto("/tweets")}>tweets</button>
 
-<button class="glow-on-hover" on:click={logPageLoad()}>logPageLoad</button>
+<button class="glow-on-hover" on:click={logPageLoad }>logPageLoad</button>

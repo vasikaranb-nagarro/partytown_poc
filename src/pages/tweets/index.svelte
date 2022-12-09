@@ -20,7 +20,7 @@
   });
 
   function reload() {
-    // empty 
+    logPageLoad();
   }
 </script>
 
